@@ -1,0 +1,5 @@
+# Ignore the entire config folder
+config/
+
+# Or, to ignore only the config.env file within the config folder
+# config/config.env
