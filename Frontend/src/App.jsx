@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
@@ -9,10 +9,15 @@ import Register from "./Pages/Register";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from "./components/Navbar";
+import { Context } from "./main";
 function App() {
+  const { isAuthenticated, setIsAuthenticated, setUSer } = useContext(Context);
+
   return (
     <>
       <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/appointment" element={<Appointment />} />
