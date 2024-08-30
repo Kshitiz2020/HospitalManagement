@@ -90,7 +90,7 @@ export const addNewAdmin = catchAsyncErrors(async (req, res, next) => {
     lastName,
     email,
     phone,
-    nic,
+    SSN,
     dob,
     gender,
     password,
@@ -117,7 +117,7 @@ export const addNewDoctor = catchAsyncErrors(async (req, res, next) => {
     lastName,
     email,
     phone,
-    nic,
+    SSN,
     dob,
     gender,
     password,
@@ -128,7 +128,7 @@ export const addNewDoctor = catchAsyncErrors(async (req, res, next) => {
     !lastName ||
     !email ||
     !phone ||
-    !nic ||
+    !SSN ||
     !dob ||
     !gender ||
     !password ||
@@ -160,7 +160,7 @@ export const addNewDoctor = catchAsyncErrors(async (req, res, next) => {
     lastName,
     email,
     phone,
-    nic,
+    SSN,
     dob,
     gender,
     password,
