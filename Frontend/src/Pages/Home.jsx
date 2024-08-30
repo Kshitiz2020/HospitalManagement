@@ -1,21 +1,23 @@
+import React, { useContext } from "react";
 import Hero from "../components/Hero";
 import Biography from "../components/Biography";
-import Department from "../components/Department";
 import MessageForm from "../components/MessageForm";
+import Departments from "../components/Departments";
 
-function Home() {
+const Home = () => {
   return (
     <>
       <Hero
         title={
-          "Welcome to KCare Wellness-Center | Your CareTaker For Healthy Life"
+          "Welcome to ZeeCare Medical Institute | Your Trusted Healthcare Provider"
         }
         imageUrl={"/hero.png"}
       />
       <Biography imageUrl={"/about.png"} />
-      <Department />
+      <Departments />
       <MessageForm />
     </>
   );
-}
+};
+
 export default Home;
