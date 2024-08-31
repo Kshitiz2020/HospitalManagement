@@ -11,7 +11,7 @@ const Register = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [SSN, setSSN] = useState("");
+  const [ssn, setSSN] = useState("");
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
@@ -24,7 +24,7 @@ const Register = () => {
       await axios
         .post(
           "http://localhost:4000/api/v1/user/patient/register",
-          { firstName, lastName, email, phone, SSN, dob, gender, password },
+          { firstName, lastName, email, phone, ssn, dob, gender, password },
           {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
@@ -94,7 +94,7 @@ const Register = () => {
             <input
               type="number"
               placeholder="SSN"
-              value={SSN}
+              value={ssn}
               onChange={(e) => setSSN(e.target.value)}
             />
             <input
