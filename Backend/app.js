@@ -5,6 +5,8 @@ import cookieParser from "cookie-parser";
 //import fileUpload from "express-fileUpload";
 import { dbConnection } from "./database/dbConnection.js";
 import messageRouter from "./router/messageRouter.js";
+import userRouter from "./router/userRouter.js";
+import appointmentRouter from "./router/appointmentRouter.js";
 import { errorMiddleware } from "./middlewares/error.js";
 
 const app = express();

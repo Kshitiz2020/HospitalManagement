@@ -14,11 +14,11 @@ export const postAppointment = catchAsyncErrors(async (req, res, next) => {
     gender,
     appointment_date,
     department,
-    doctor_firstName,
-    doctor_lastName,
+
     hasVisited,
     address,
   } = req.body;
+  console.log(req.body);
   if (
     !firstName ||
     !lastName ||
@@ -29,15 +29,11 @@ export const postAppointment = catchAsyncErrors(async (req, res, next) => {
     !gender ||
     !appointment_date ||
     !department ||
-    !doctor_firstName ||
-    !doctor_lastName ||
     !address
   ) {
     return next(new ErrorHandler("Please Fill Full Form!", 400));
   }
   const isConflict = await User.find({
-    firstName: doctor_firstName,
-    lastName: doctor_lastName,
     role: "Doctor",
     doctorDepartment: department,
   });
